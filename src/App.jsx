@@ -1,14 +1,10 @@
-import './App.css'
-import Terminal from './components/Terminal'
 
+import Terminal from './components/Terminal'
 
 function App() {
   return (
-    <div className='main-grid'>
-      <div className='main-info'>
-        <Terminal />
-      </div>
-      <div className='user-info'>
+    <div className='w-full'>
+      <div className='w-full'>
         <Terminal />
       </div>
     </div>
