@@ -4,13 +4,26 @@ export default {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    colors: {
+    extend: {
+      colors: {
       'term-background': '#1A1B26',
       'accent-color':'#8179B3',
       'container-background': '#24283B',
-      'main': '#CFC9C2',
+      'char-main': '#CFC9C2',
+      'char-accent': '#7de5fa',
     },
-    extend: {},
+
+    spacing:{
+      '.5/8':'6.25%',
+      '1/8':'12.5%',
+      '2/8':'25%',
+      '3/8':'37.5%',
+      '4/8':'50%',
+      '5/8':'62.5%',
+      '6/8':'75%',
+      '7/8':'87.5%',
+      }
+    },
   },
   plugins: [],
 }
