@@ -1,6 +1,10 @@
+import { useState } from 'react'
+import InitView from './commandOutputs/InitView'
 
+function Terminal({initialView}) {
 
-function Terminal() {
+    let x = [InitView];
+    
     return (
         <div className='bg-term-background text-char-main border-accent-color border-4 rounded-xl h-full flex-col overflow-hidden'>
             {/* Terminal header */}
@@ -20,7 +24,9 @@ function Terminal() {
             <div className='overflow-y-scroll scroll-smooth flex-2 h-7/8 m-4 p-4'>                
                 {/* Output field */}
                 <div className='m-4'>
-                    <p>Filler Text</p>
+                    {x.map((value, index) => (
+                        <div key={index}>{value}</div>
+                    ))}
                 </div>                
                 {/* Terminal Input Field */}
                 <div>
