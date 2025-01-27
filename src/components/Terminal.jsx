@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import InitView from './commandOutputs/InitView'
 
 function Terminal({initialView}) {
 
-    let x = [InitView];
+    let x = [initialView];
     
     return (
         <div className='bg-term-background text-char-main border-accent-color border-4 rounded-xl h-full flex-col overflow-hidden'>
@@ -21,11 +19,11 @@ function Terminal({initialView}) {
                 </div>
             </div>
             {/* Terminal Body */}
-            <div className='overflow-y-scroll scroll-smooth flex-2 h-7/8 m-4 p-4'>                
+            <div className='overflow-y-scroll scroll-smooth flex-2 h-7/8 m-4'>                
                 {/* Output field */}
                 <div className='m-4'>
                     {x.map((value, index) => (
-                        <div key={index}>{value}</div>
+                        <div key={index}>{value.call()}</div>
                     ))}
                 </div>                
                 {/* Terminal Input Field */}
