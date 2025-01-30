@@ -1,7 +1,18 @@
+import { useEffect, useState } from "react";
+import { callCommand } from "../../backend/commandHandler";
 
 function Terminal({initialView}) {
+    // State storing the current terminal output
+    const [view, setView] = useState([initialView]);
 
-    let x = [initialView];
+    // handle input submit
+    const handleInputKeyDown = (e) => {
+        if (e.key == 'Enter') {
+            // call commandHandler to handle the inputed command
+            callCommand(e.target.value, view, setView)
+            e.target.value = ''
+        }
+    } 
     
     return (
         <div className='bg-term-background text-char-main border-accent-color border-4 rounded-xl h-full flex-col overflow-hidden'>
@@ -22,7 +33,8 @@ function Terminal({initialView}) {
             <div className='overflow-y-scroll scroll-smooth flex-2 h-7/8 m-4'>                
                 {/* Output field */}
                 <div className='m-4'>
-                    {x.map((value, index) => (
+                    {/* Render whole outputView */}
+                    {view.map((value, index) => (
                         <div key={index}>{value.call()}</div>
                     ))}
                 </div>                
@@ -35,7 +47,7 @@ function Terminal({initialView}) {
                         <div className="pr-1 text-green-400">
                             <b>{'> ' }</b>
                         </div>
-                        <input className="w-full pl-1 bg-term-background border-none outline-none"></input>
+                        <input className="w-full pl-1 bg-term-background border-none outline-none" onKeyDown={handleInputKeyDown}></input>
                     </div>   
                 </div>
             </div>

@@ -1,6 +1,6 @@
 function StatusView() {
     return (
-        <div>
+        <div className="">
             <p>Filler Text</p>
         </div>
     )    

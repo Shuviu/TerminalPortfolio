@@ -1,6 +1,6 @@
 function AboutMeView() {
     return (
-        <div>
+        <div className="">
             <div className='overflow-y-scroll scroll-smooth flex-2'>
                 {/* Output field */}
                 <div className='flex-col'>
