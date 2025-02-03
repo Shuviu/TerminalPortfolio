@@ -1,4 +1,4 @@
-import { call } from './commands/ls'
+import { call as call_cat } from './commands/cat.js'
 
 // Universal handling of commands
 export function callCommand(input, currentView, updateView){
@@ -12,11 +12,12 @@ export function callCommand(input, currentView, updateView){
 
     // call each command individually
     switch (command) {
-        case 'ls':
-            updateView([...currentView, call(value)])
+        case 'cat':
+            updateView([...currentView, call_cat(value)])
             break;
         case 'clear':
             updateView([currentView[0]])
+            break;
         default:
             break;
     }
