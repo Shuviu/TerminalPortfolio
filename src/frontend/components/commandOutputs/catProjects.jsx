@@ -1,10 +1,6 @@
-function lsProjects(params) {
+function catProjects(params) {
     return(
         <div>
-            
-            <div className="flex flex-wrap">
-                <p className="whitespace-pre"># </p><p></p>
-            </div>
             <div className="flex flex-wrap">
                 <p className="whitespace-pre"># </p><p className="font-extrabold underline">Projects: </p>
             </div>
@@ -57,4 +53,4 @@ function lsProjects(params) {
     )
 }
 
-export default lsProjects
+export default catProjects;

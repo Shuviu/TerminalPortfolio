@@ -31,6 +31,10 @@ function MainView() {
                 <div className="flex flex-wrap">
                     <p className="whitespace-pre"># </p><p>Ontop of that I'm always trying to advance and sharpen my skill with my own small projects in my spare time.</p>
                 </div>
+                <div className="flex flex-wrap">
+                    <p className="whitespace-pre"># </p><p></p>
+                </div>
+
             </div>
         </div>
     )

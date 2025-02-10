@@ -24,7 +24,6 @@ function AboutMeView() {
                         <p className="w-1/3">Languages:</p><p className="w-2/3">German, English</p>
                     </div>
                 </div>
-
             </div>
         </div>
     )

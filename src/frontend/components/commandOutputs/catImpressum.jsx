@@ -1,4 +1,4 @@
-function lsImpressum(params) {
+function catImpressum(params) {
     
     return(
         <div>
@@ -24,4 +24,4 @@ function lsImpressum(params) {
     )
 }
 
-export default lsImpressum
+export default catImpressum;
